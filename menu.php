@@ -4,7 +4,7 @@ $country = isset($_GET['country']) ? strtolower($_GET['country']) : null;
 
 // Define display names
 $countryNames = [
-    'england' => 'England',
+    'uk' => 'United Kingdom',
     'scotland' => 'Scotland',
     'philippines' => 'Philippines',
     'thailand' => 'Thailand',
@@ -24,8 +24,14 @@ $selectedCountryName = $countryNames[$country] ?? 'Select Country';
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
+                <!-- Home Button -->
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
+                </li>
+
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
 
                 <!-- Country Dropdown -->
@@ -34,11 +40,10 @@ $selectedCountryName = $countryNames[$country] ?? 'Select Country';
                         <?= htmlspecialchars($selectedCountryName) ?>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="countryDropdown">
-                        <li><a class="dropdown-item" href="box.php?country=england">England</a></li>
+                        <li><a class="dropdown-item" href="box.php?country=uk">United Kingdom</a></li>
                         <li><a class="dropdown-item" href="box.php?country=scotland">Scotland</a></li>
                         <li><a class="dropdown-item" href="box.php?country=philippines">Philippines</a></li>
                         <li><a class="dropdown-item" href="box.php?country=thailand">Thailand</a></li>
-
                     </ul>
                 </li>
             </ul>
